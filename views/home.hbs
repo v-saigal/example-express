@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="data:,">
+
+    <title>{{title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <h1>Home</h1>
+
+    <a href="/new"> Let me post something!</a> <br>
+
+
+        <div> The index page!<br>
+          <ul>
+            {{#each sentMessages}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+
+    {{#if isNew}}
+      <div> The new page!</div>
+      <form action="/" method="post">
+        <input id="input" type="text" name="input" value="Type something!">
+        <input type="submit" name="submit" value="Send">
+      </form>
+    {{/if}}
+    {{#if hasCreatedSomething}}
+      <div>Thanks for adding something!</div>
+    {{/if}}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+
+</html>
